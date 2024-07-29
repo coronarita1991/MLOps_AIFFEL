@@ -1,0 +1,26 @@
+# docker-compose.yaml
+services:
+  redis: 
+    image: redislabs/redismod
+    platform: linux/amd64
+    container_name: flask-redis-redis-1
+    ports:
+      - '6379:6379'
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+
+    platform: linux/amd64
+    container_name: flask-redis-web-1 
+    environment:
+      PORT: 8000
+      REDIS_HOST: 'redis'
+    ports:
+      - '8000:8000'
+    depends_on:
+      - redis
+    volumes:
+      - .:/code
+    restart: "no"
