@@ -42,5 +42,7 @@ print("Train Accuracy :", train_acc)
 print("Valid Accuracy :", valid_acc)
 
 # 3. save model
-joblib.dump(scaler, "scaler.joblib")
-joblib.dump(classifier, "classifier.joblib")
+joblib.dump(model_pipeline, "db_pipeline.joblib")
+
+# 4. save data
+df.to_csv("data.csv", index=False)
