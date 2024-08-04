@@ -19,9 +19,9 @@
     주의해야 할 점은, GCP에서 진행하게 된다면, GCP 내에서의 방화벽 정책을 신경써서 사용하게되는 포트를 열어줘야합니다. 
 
 # 실습 시 캡쳐자료 (GCP의 유동IP가 명시되어 있음)
-![alt text](image-1.png)
+![alt text](resources/image-1.png)
 
-![alt text](image.png)
+![alt text](resources/image.png)
 
 # 참고자료
 https://github.com/mlops-for-mle/mlops-for-mle
